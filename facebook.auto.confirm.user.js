@@ -1,6 +1,9 @@
 // ==UserScript==
 // @name         Facebook Auto Confirm
-// @version      0.0.15
+// @namespace    https://laksa19.github.io/facebook-auto
+// @updateURL    https://raw.githubusercontent.com/laksa19/facebook-auto/master/facebook.auto.confirm.user.js
+// @downloadURL  https://raw.githubusercontent.com/laksa19/facebook-auto/master/facebook.auto.confirm.user.js
+// @version      0.0.20
 // @author       Laksamadi Guko
 // @description  Facebook Auto Confirm Friend Requests
 // @match        *://www.facebook.com/friends/requests/*
@@ -25,13 +28,13 @@ function Confirm(indx){
 
 
 var counter = 0;
-setInterval(function(){
+var auto = setInterval(function(){
     counter++;
-//console.log(counter)
+    console.log(counter)
     Confirm(counter)
 
-     if (counter === 20) {
-       clearInterval(counter);
+     if (counter === 25) {
+       clearInterval(auto);
      }
   }, 5000);
 
