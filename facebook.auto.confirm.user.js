@@ -30,7 +30,7 @@ function Confirm(indx){
 var counter = 0;
 var auto = setInterval(function(){
     counter++;
-    console.log(counter)
+    //console.log(counter)
     Confirm(counter)
 
      if (counter === 25) {
