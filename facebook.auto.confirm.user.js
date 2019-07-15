@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Facebook Auto Confirm
-// @version      0.0.10
+// @version      0.0.15
 // @author       Laksamadi Guko
 // @description  Facebook Auto Confirm Friend Requests
 // @match        *://www.facebook.com/friends/requests/*
@@ -17,18 +17,20 @@ function Confirm(indx){
             var getHTML = el[indx].innerHTML;
             if(getHTML == "Confirm"){
             el[indx].click();
-            console.log("clicked");
+            console.log("Confirm");
             }
     }
 
 }
-setInterval(function(){
-    var counter = 0;
-    counter++;
 
+
+var counter = 0;
+setInterval(function(){
+    counter++;
+//console.log(counter)
     Confirm(counter)
 
-     if (counter === 50) {
+     if (counter === 20) {
        clearInterval(counter);
      }
   }, 5000);
