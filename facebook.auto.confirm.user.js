@@ -33,10 +33,10 @@ var auto = setInterval(function(){
     //console.log(counter)
     Confirm(counter)
 
-     if (counter === 25) {
+     if (counter === 100) {
        clearInterval(auto);
      }
-  }, 5000);
+  }, 2500);
 
 
 })();
